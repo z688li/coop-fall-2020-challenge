@@ -9,12 +9,10 @@ class EventSourcer():
     def add(self, num: int):
         self.undo_stack.append(num)
         self.value += num
-        # self.redo_stack = []
 
     def subtract(self, num: int):
         self.undo_stack.append(0-num)
         self.value -= num
-        # self.redo_stack = []
 
     def undo(self):
         if len(self.undo_stack) != 0:
